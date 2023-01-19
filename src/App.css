@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+
+
+/* First loding page */
+
+.first-loding-page {
+    background-color: yellow;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#snapchat-logo {
+    width: 230px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*  flp end */
+
+/* loading circle */
+.loding-center {
+    display: none;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    z-index: 5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-opp {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.big-load {
+    width: 16px;
+    height: 16px;
+    border: solid 3px black;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transition: all 0.5s ease-in;
+    animation-name: rotate;
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.small-load {
+    width: 7px;
+    height: 7px;
+    border: solid 3px black;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-transition: all 0.5s ease-in;
+
+    transition: all 0.5s ease-in;
+    animation-name: rotate-opp;
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+}
+
+/* lc end */
+
+
+/* Main page */
+.main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+.main-text {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.login-btn {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#login-click {
+    margin-bottom: 20px;
+    width: 17rem;
+    padding: 5px 0px 5px 0px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 900;
+    font-size: 17px;
+}
+/* mp end */
+
+/* Login page */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.heading {
+    font-weight: 900;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.email-field {
+    margin-bottom: 35px;
+}
+
+.input-fields {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    outline: none;
+}
+
+.ab {
+    position: relative;
+}
+.password-box {
+    position: relative;
+}
+
+#eye-off {
+    position: absolute;
+    bottom: 7px;
+    font-size: 19px;
+    left: 14.8rem;
+    cursor: pointer;
+}
+.label {
+    font-size: 15px;
+    color: #00a2ef;
+}
+
+.input-fields {
+    background-color: white;
+}
+
+.input-fields:focus {
+    border-bottom: 2px solid #00a2ef;
+    background-color: white;
+}
+
+.sub-btn {
+    margin-top: 50px;
+}
+
+
+
+#submit-btn {
+    padding: 7px 40px 7px 40px;
+    background-color: #a4adb3;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 900;
+    font-size: 17px;
+    border-radius: 50px;
+}
+
+.incorrect {
+    display: none;
+    margin-top: 50px;
+    text-align: center;
+    color: red;
+    padding: 0px 10px 0px 10px;
+}
+
+/* lp end */
+
+/* last page */
+.Last-page {
+    background-color: yellow;
+    color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.snap {
+    width: 100px;
+}
+/* last page end */
+
+.hidden {
+    display: none;
+}
+
+#text {
+    display: none;
 }
